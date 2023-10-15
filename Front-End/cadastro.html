@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="shortcut icon" href="./Assets/duffle.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./CSS/cadastro.css">
+</head>
+
+<body>
+
+  <!--Início da navbar-->
+  <header>
+    <nav class="navbar navbar-expand-lg text-white" style="background:linear-gradient(90deg, #de6060 20%, #ab0f0f 100%);">
+      <a class="navbar-brand text-white p-2 pt-2" href="./index.html">
+       <!-- <img src="" alt="logo" width="45" height="40" class="d-inline-block align-text-top">-->
+       - SuperViagem - 
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-items">
+            <a class="nav-link active text-white p-3" aria-current="page" href="./cadastro.html">Cadastro</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white p-3" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white p-3" href="./destino.html">Destino</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white p-3" href="./promocoes.html">Promoções</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white p-3" href="./contato.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+  <!--Fim da navbar-->
+
+  <!--Início do Cadastro-->
+  <div class="container-fluid">
+    <main>
+        <h1 style="text-align: center;padding-top: 90px;font-weight: normal;
+        ">Cadastro:</h1>
+        <div class="container" id="Formulario">
+            <form>
+                <div class="row">
+                    <label class="form-label">Nome </label>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Nome" aria-label="First name">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Sobrenome" aria-label="Last name"><br>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputPassword4" class="form-label" >Senha</label> 
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="********">
+                </div>
+                <div class="mb-3">
+                    <label for="UserName" class="form-label" >Nome de usuario</label> 
+                    <input type="name" class="form-control" id="UserName" placeholder="@name.exemple">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email </label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="name@example.com"
+                        aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="form-text" class="form-label">Telefone</label>
+                    <input type="number" class="form-control" 
+                        placeholder="(99)99999-9999">
+                </div>  
+            <br>
+                <button type="submit" class="btn btn-primary mb-5 bCadastro">Criar Conta</button>
+            </form>
+        </div>
+    </main>
+</div>
+
+<!--Fim do cadastro-->
+
+  <!--Início do footer-->
+  <footer class="pt-4">
+    <p class="text-center">&copy; 2023 SuperViagem. Todos os direitos reservados.</p>
+  </footer>
+  <!--Fim do footer-->
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

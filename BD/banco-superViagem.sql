@@ -1,0 +1,31 @@
+CREATE DATABASE SUPERVIAGEM; 
+USE SUPERVIAGEM; 
+
+create table usuario(
+	ID_USUARIO INT PRIMARY KEY auto_increment,
+    NOME_U VARCHAR(50) NOT NULL,
+    EMAIL_U VARCHAR(100) NOT NULL,
+    SENHA_U VARCHAR(30) NOT NULL
+);
+select * from usuario;
+
+create table viagem(
+	ID_VIAGEM INT PRIMARY KEY auto_increment,
+    ESTADO_V VARCHAR(50) NOT NULL,
+    CIDADE_V VARCHAR(100) NOT NULL,
+    ID_USUARIO INT,
+	FOREIGN KEY (ID_USUARIO) REFERENCES usuario (ID_USUARIO)
+);
+select * from viagem;
+
+create table reserva(
+	ID_RESERVA INT PRIMARY KEY auto_increment,
+    VALOR VARCHAR(50) NOT NULL,
+    DATA_INICIO DATE NOT NULL,
+    DATA_FIM DATE NOT NULL,
+    ID_USUARIO INT,
+    ID_VIAGEM INT,
+	FOREIGN KEY (ID_USUARIO) REFERENCES usuario (ID_USUARIO),
+    FOREIGN KEY (ID_VIAGEM) REFERENCES viagem (ID_VIAGEM)
+);
+select * from reserva;

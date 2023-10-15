@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*NAVBAR*/
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    font-weight: bold;
+}
+
+header li a{
+    color: white;
+    border-radius: 1cm;
+}
+
+ header li a:hover{
+    background-color: #ab0f0f;
+    border-radius: 1cm;
+}
+
+/*BOTOES*/
+
+.botao{
+    width: 100px;
+    background-color: #ab0f0f !important;
+    border: 1px solid #ab0f0f !important;
+    margin-top: 10px;
+    margin-left: 1%;
+    text-align: center !important;
+ }
+ 
+ .botao:hover{
+     background-color: #de6060 !important;
+     border: 1px solid #de6060 !important;
+ }
+
+/*FOOTER*/
+
+footer{
+    margin-top: 60px;
+    height: 60px;
+    width: 100%;
+    background-color: #ab0f0f;
+    color: white;
+}

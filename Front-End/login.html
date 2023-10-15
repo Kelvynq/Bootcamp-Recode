@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="shortcut icon" href="./Assets/duffle.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./CSS/login.css">
+</head>
+
+<body>
+
+  <!--Início da navbar-->
+  <header>
+    <nav class="navbar navbar-expand-lg text-white" style="background:linear-gradient(90deg, #de6060 20%, #ab0f0f 100%);">
+      <a class="navbar-brand text-white p-2 pt-2" href="./index.html">
+       <!-- <img src="" alt="logo" width="45" height="40" class="d-inline-block align-text-top">-->
+       - SuperViagem - 
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-items">
+            <a class="nav-link active text-white p-3" aria-current="page" href="./cadastro.html">Cadastro</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white p-3" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white p-3" href="./destino.html">Destino</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white p-3" href="./promocoes.html">Promoções</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white p-3" href="./contato.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+  <!--Fim da navbar-->
+
+  <!--Início do Login-->
+  <main class="main-content container">
+    <div class="main-content container m-3">
+            <div class="row justify-content-center align-items-center" >
+                <div class="col-md-6">
+                        <form class="form" action="" method="post">
+                            <h1 class="text-center pt-5 pb-5" style="font-weight: normal;
+                            ">Login</h1>
+                            <div>
+                                <label for="username">Nome de usuário:</label><br>
+                                <input type="text" name="username" id="username" autocomplete="given-name"
+                                    class="form-control">
+                            </div>
+                            <div>
+                                <label for="password">Senha:</label><br>
+                                <input type="text" name="password" id="password" autocomplete="current-password"
+                                    class="form-control">
+                            </div>
+                            <div>
+                                <label for="remember-me"><span>Lembre-me </span><span><input
+                                            id="remember-me" name="remember-me"
+                                            type="checkbox"></span></label><br>
+                                <input type="submit" name="submit" class="btn btn-lg btn-custom-bg mt-4 bcards"
+                                    value="Entrar">
+                            </div>
+                            <div class="text-end">
+                                <a href="cadastro.html" class="bregis">Registre-se</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+</main>
+
+<!--Fim do Login-->
+
+  <!--Início do footer-->
+  <footer class="pt-4">
+    <p class="text-center">&copy; 2023 SuperViagem. Todos os direitos reservados.</p>
+  </footer>
+  <!--Fim do footer-->
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

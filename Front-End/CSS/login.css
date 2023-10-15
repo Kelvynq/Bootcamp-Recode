@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*NAVBAR*/
+
+header{
+    position: fixed;
+  width: 100%;
+  z-index: 1;
+
+    font-weight: bold;
+}
+
+header li a{
+    color: white;
+    border-radius: 1cm;
+}
+
+ header li a:hover{
+    background-color: #ab0f0f;
+    border-radius: 1cm;
+}
+
+/*LOGIN*/
+
+.main-content {
+    grid-area: main;
+    width: 100%;
+    padding: 40px 0px;
+}
+
+.bcards{
+    width: 100px;
+    background-color: #ab0f0f !important;
+    border: 1px solid #ab0f0f !important;
+    color: white;
+    margin-top: 10px;
+    text-align: center !important;
+ }
+
+ .bcards:hover{
+    background-color: #de6060 !important;
+    border: 1px solid #de6060 !important;
+}
+
+ .bregis{
+    color: #de6060 ;
+ }
+
+ .bregis:hover{
+    color: #ab0f0f;
+ }
+
+/*FOOTER*/
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #ab0f0f;
+    color: white;
+}
+
+
+

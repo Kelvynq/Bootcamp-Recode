@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <link rel="stylesheet" href="./CSS/contato.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+
+  <!--Início da navbar-->
+  <header>
+    <nav class="navbar navbar-expand-lg text-white" style="background:linear-gradient(90deg, #de6060 20%, #ab0f0f 100%);">
+      <a class="navbar-brand text-white p-2 pt-2" href="./index.html">
+       <!-- <img src="" alt="logo" width="45" height="40" class="d-inline-block align-text-top">-->
+       - SuperViagem - 
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-items">
+            <a class="nav-link active text-white p-3" aria-current="page" href="./cadastro.html">Cadastro</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white p-3" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white p-3" href="./destino.html">Destino</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white p-3" href="./promocoes.html">Promoções</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white p-3" href="./contato.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+  <!--Fim da navbar-->
+
+  <!--Início do título-->
+  <div class="container pt-5">
+    <p class="display-6 pt-5 pb-5">Envie sua dúvida</p>
+  </div>
+  <!--Fim do título-->
+
+  <!--Início do formulário-->
+
+  <div class="container d-flex">
+    <img src="./Assets/Duvidas.jpg" class="img-fluid rounded" alt="...">
+    <form class="row g-3 p-4">
+      <div class="col-md-6">
+        <label for="validationDefault01" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="validationDefault01" value="" required>
+      </div>
+      <div class="col-md-6">
+        <label for="validationDefault02" class="form-label">Sobrenome</label>
+        <input type="text" class="form-control" id="validationDefault02" value="" required>
+      </div>
+      <div class="col-md-6">
+        <label for="validationDefault03" class="form-label">Qual o estado da viagem?</label>
+        <input type="text" class="form-control" id="validationDefault03" required>
+      </div>
+      <div class="col-md-6">
+        <label for="validationDefault03" class="form-label">Qual a cidade da viagem?</label>
+        <input type="text" class="form-control" id="validationDefault03" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Informe sua dúvida detalhadamente</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+          <label class="form-check-label" for="invalidCheck2">
+            Aceito os termos e condições
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary botao" type="button">Enviar</button>
+      </div>
+    </form>
+  </div>
+  <!--Fim do formulário-->
+
+  <!--Início do título-->
+  <div class="container pt-5">
+    <p class="display-6">Outros Contatos</p>
+  </div>
+  <!--Fim do título-->
+
+  <!--Início da tabela-->
+  <div class="container">
+    <div class="pt-2 m-4">
+      <table class="table table-hover">
+        <tbody>
+          <tr>
+            <th scope="row" style="color: #ab0f0f;">Telefone</th>
+            <td>(83) 99999-9999</td>
+          </tr>
+          <tr>
+            <th scope="row" style="color: #ab0f0f;">Instagram</th>
+            <td colspan="2">@Super_Viagem</td>
+          </tr>
+          <tr>
+            <th scope="row" style="color: #ab0f0f;">E=mail</th>
+            <td colspan="2">super_viagemof@gmail.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!--Fim da tabela-->
+
+  <!--Início do footer-->
+  <footer class="pt-4">
+    <p class="text-center">&copy; 2023 SuperViagem. Todos os direitos reservados.</p>
+  </footer>
+  <!--Fim do footer-->
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
