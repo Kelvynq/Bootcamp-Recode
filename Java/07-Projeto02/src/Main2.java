@@ -235,8 +235,20 @@ public class Main2 {
 							ViagemDAO viagemDAO2 = new ViagemDAO();
 							System.out.println("Valor: ");
 							reserva.setVALOR(scanner.nextFloat());
-							reserva.setDATA_INICIO(new Date(0));
-							reserva.setDATA_FIM(new Date(0));
+							System.out.println("Dia do check-in: ");
+							int diai = scanner.nextInt();
+							System.out.println("Mês do check-in: ");
+							int mesi = scanner.nextInt();
+							System.out.println("Ano do check-in: ");
+							int anoi = scanner.nextInt();
+							reserva.setDATA_INICIO(new Date(anoi-1900, mesi-1, diai));
+							System.out.println("Dia do check-out: ");
+							int diaf = scanner.nextInt();
+							System.out.println("Mês do check-out: ");
+							int mesf = scanner.nextInt();
+							System.out.println("Ano do check-out: ");
+							int anof = scanner.nextInt();
+							reserva.setDATA_FIM(new Date(anof-1900, mesf-1, diaf));
 							System.out.println("ID do usuário: ");
 							int usuarioIdr = scanner.nextInt();
 							Usuario usuariobr = usuarioDAO3.buscarUsuario(usuarioIdr);
@@ -251,7 +263,7 @@ public class Main2 {
 							if (viagemb != null) {
 								reserva.setViagem(viagemb);
 							} else {
-								System.out.println("Usuário não encontrado.");
+								System.out.println("Viagem não encontrada.");
 							}
 							System.out.println("ID reserva:");
 							reserva.setID_RESERVA(scanner.nextInt());
@@ -288,13 +300,13 @@ public class Main2 {
 							break;
 						case 2:
 							ViagemDAO viagemDAO = new ViagemDAO();
-							System.out.println("Digite o ID do Usuário a ser DELETADO");
+							System.out.println("Digite o ID da Viagem a ser DELETADO");
 							int idviagem = scanner.nextInt();
 							viagemDAO.deleteViagem(idviagem);
 							break;
 						case 3:
 							ReservaDAO reservaDAO = new ReservaDAO();
-							System.out.println("Digite o ID do Usuário a ser DELETADO");
+							System.out.println("Digite o ID da Reserva a ser DELETADO");
 							int idreserva = scanner.nextInt();
 							reservaDAO.deleteReserva(idreserva);
 							break;
