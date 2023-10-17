@@ -1,4 +1,4 @@
-<h1 align="center"> Projeto 01 - Recode Pro </h1>
+<h1 align="center"> Projeto 02 - Recode Pro </h1>
 
 <p align="center">
 
