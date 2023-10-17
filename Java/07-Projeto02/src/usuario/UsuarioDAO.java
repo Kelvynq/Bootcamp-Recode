@@ -47,7 +47,7 @@ public class UsuarioDAO {
 					usuario.setEMAIL_U(r.getString("EMAIL_U"));
 					usuario.setSENHA_U(r.getString("SENHA_U"));
 
-					System.out.printf("ID: %s\n Nome: %s\n Email: %s\n senha: %s\n", usuario.getID_USUARIO(), usuario.getNOME_U(),
+					System.out.printf("ID DO USUÁRIO: %s\n Nome: %s\n Email: %s\n senha: %s\n\n", usuario.getID_USUARIO(), usuario.getNOME_U(),
 							usuario.getEMAIL_U(), usuario.getSENHA_U());
 
 				}
@@ -68,9 +68,9 @@ public class UsuarioDAO {
 				stmt.setString(3, usuario.getSENHA_U());
 				stmt.setInt(4, usuario.getID_USUARIO());
 				stmt.executeUpdate();
-				System.out.println("Cliente atualizado com sucesso!\n");
+				System.out.println("Usuário atualizado com sucesso!\n");
 			} catch (SQLException e) {
-				System.out.println(" Nao foi possivel atualizar o cliente." + "Mensagem: " + e.getMessage());
+				System.out.println(" Nao foi possivel atualizar o usuário." + "Mensagem: " + e.getMessage());
 			}
 		}
 		

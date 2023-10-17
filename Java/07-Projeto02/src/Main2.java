@@ -149,7 +149,7 @@ public class Main2 {
 						do {
 							System.out.println("========== Menu Visualizar ==========");;
 							System.out.println("=     1 - Visualizar usuário        =");
-							System.out.println("=     2 - Visualizar viagem          =");
+							System.out.println("=     2 - Visualizar viagem         =");
 							System.out.println("=     3 - Visualizar reserva        =");
 							System.out.println("=     4 - Voltar ao Menu Principal  =");
 							System.out.println("=====================================");

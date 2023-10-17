@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import conexao.Conexao;
+import usuario.Usuario;
 import usuario.UsuarioDAO;
 
 public class ViagemDAO {
@@ -32,13 +33,14 @@ public class ViagemDAO {
 			stmt.executeUpdate();
 			System.out.println("Viagem criada com sucesso!\n");
 		} catch (Exception e) {
-			System.out.println("Nao foi possivel criar o usuário.\n" + e.getMessage());
+			System.out.println("Nao foi possivel criar a viagem.\n" + e.getMessage());
 		} 
 	}
     
     // READ - Viagem
     public void lerTodasViagens() {
-		String sql = "SELECT * FROM viagem";
+		//String sql = "SELECT * FROM viagem";
+		String sql = "SELECT * FROM viagem as v " + "INNER JOIN usuario as u " + "ON v.ID_USUARIO = u.ID_USUARIO";
 		try (PreparedStatement stmt = conexao.prepareStatement(sql)) {
 			ResultSet r = stmt.executeQuery();
 			while (r.next()) {
@@ -46,8 +48,13 @@ public class ViagemDAO {
 				viagem.setID_VIAGEM(r.getInt("ID_VIAGEM"));
                 viagem.setESTADO_V(r.getNString("ESTADO_V"));
                 viagem.setCIDADE_V(r.getNString("CIDADE_V"));
-                viagem.setUsuario(usuarioDAO.buscarUsuario(r.getInt("ID_USUARIO")));
-				System.out.printf("ID: %s\n Estado: %s\n Cidade: %s\n", viagem.getID_VIAGEM(), viagem.getESTADO_V(),
+                
+                //viagem.setUsuario(usuarioDAO.buscarUsuario(r.getInt("ID_USUARIO")));
+                
+                Usuario usuario = new Usuario();
+                usuario.setID_USUARIO(r.getInt("ID_USUARIO"));
+                usuario.setNOME_U(r.getString("NOME_U"));
+				System.out.printf("ID DA VIAGEM: %s\n Nome: %s\n Estado: %s\n Cidade: %s\n\n", viagem.getID_VIAGEM(),usuario.getNOME_U(), viagem.getESTADO_V(),
 						viagem.getCIDADE_V());
 			}
 			if (!r.next()) {

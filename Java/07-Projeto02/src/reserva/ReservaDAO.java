@@ -8,7 +8,9 @@ import java.sql.Date;
 
 
 import conexao.Conexao;
+import usuario.Usuario;
 import usuario.UsuarioDAO;
+import viagem.Viagem;
 import viagem.ViagemDAO;
 
 public class ReservaDAO {
@@ -44,7 +46,8 @@ public class ReservaDAO {
     
     // READ - Reserva
     public void lerTodasReservas() {
-		String sql = "SELECT * FROM reserva";
+		//String sql = "SELECT * FROM reserva";
+			String sql = "SELECT * FROM reserva as r " + "INNER JOIN usuario as u " + "ON r.ID_USUARIO = u.ID_USUARIO";
 		try (PreparedStatement stmt = conexao.prepareStatement(sql)) {
 			ResultSet r = stmt.executeQuery();
 			while (r.next()) {
@@ -55,7 +58,15 @@ public class ReservaDAO {
                 reserva.setDATA_FIM(r.getDate("DATA_FIM"));
                 reserva.setUsuario(usuarioDAO.buscarUsuario(r.getInt("ID_USUARIO")));
                 reserva.setViagem(viagemDAO.buscarViagem(r.getInt("ID_VIAGEM")));
-				System.out.printf("ID: %s\n Check-in: %s\n Check-out: %s\n", reserva.getID_RESERVA(), reserva.getDATA_INICIO(),
+                
+                Usuario usuario = new Usuario();
+                usuario.setID_USUARIO(r.getInt("ID_USUARIO"));
+                usuario.setNOME_U(r.getString("NOME_U"));
+                
+                Viagem viagem = new Viagem();
+                viagem.setID_VIAGEM(r.getInt("ID_VIAGEM"));
+                
+				System.out.printf("ID DA RESERVA: %s\n Nome: %s\n Check-in: %s\n Check-out: %s\n \n",  reserva.getID_RESERVA(),usuario.getNOME_U(), reserva.getDATA_INICIO(),
 						reserva.getDATA_FIM());
 			}
 			if (!r.next()) {
